@@ -5,6 +5,7 @@ module.exports = {
     "plugin:@furugomu/+ts",
     "plugin:@furugomu/+tsx"
   ],
+  env:{jest:true},
   overrides: [
     {
       files: ["src/main/**/*.ts"],

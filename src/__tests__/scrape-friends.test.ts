@@ -2,47 +2,47 @@ import "jest";
 import fs from "fs";
 import assert from "assert";
 
-import scrape from "../scrape";
+import scrapeFriends from "../scrape-friends";
 
-describe("scrape", () => {
+describe("scrapeFriends", () => {
   const html = fs.readFileSync(__dirname + "/f3-109.html").toString();
   test("id", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.id === "F3-109");
   });
 
   test("name", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.name === "スイートライムライトトップス");
   });
 
   test("type", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.type === "ポップ");
   });
 
   test("category", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.category === "トップス");
   });
 
   test("brand", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.brand === "フワフワドリーム");
   });
 
   test("appealPoint", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.appealPoint === 900);
   });
 
   test("rarity", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.rarity === "プレミアムレア");
   });
 
   test("rarityLevel", () => {
-    const card = scrape(html);
+    const card = scrapeFriends(html);
     assert(card.rarityLevel === 3);
   });
 });

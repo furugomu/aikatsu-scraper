@@ -3,7 +3,7 @@ import { Card } from "./card";
 
 const { JSDOM } = jsdom;
 
-const scrape = (html: string): Card => {
+const scrapeFriends = (html: string): Card => {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
 
@@ -26,7 +26,7 @@ const scrape = (html: string): Card => {
     rarityLevel: rarityMatches[2].length
   };
 };
-export default scrape;
+export default scrapeFriends;
 
 const text = (doc: Document, selector: string): string => {
   const el = select(doc, selector);
