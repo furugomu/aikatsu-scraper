@@ -4,7 +4,7 @@ import { text, altText } from "./selector";
 
 const { JSDOM } = jsdom;
 
-const scrapeFriends = (html: string): Card => {
+const scrapeStars = (html: string): Card => {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
 
@@ -26,4 +26,4 @@ const scrapeFriends = (html: string): Card => {
     rarityLevel: rarityMatches[2].length
   };
 };
-export default scrapeFriends;
+export default scrapeStars;

@@ -1,11 +1,17 @@
 {
-  "name": "aikatsu-scraper",
+  "name": "@furugomu/aikatsu-scraper",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "private": true,
+  "author": "furugomu@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/furugomu/aikatsu-scraper"
+  },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "axios": "^0.18.0",
