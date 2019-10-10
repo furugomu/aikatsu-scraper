@@ -13,7 +13,8 @@ const scrapeStars = (html: string): Card => {
 
   // レアリティー "スタープレミアムレア<br>★★★★"
   const rarity = text(doc, ".dress-detail-data .reality dd");
-  const rarityMatches = rarity.match(/^([^★]+)\s*(★+)/)!;
+  const rarityMatches = rarity.match(/^([^★]+)\s*(★+)/);
+  if (!rarityMatches) throw new Error("レアリティが変 " + rarity);
 
   return {
     id,
